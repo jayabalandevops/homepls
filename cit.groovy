@@ -7,10 +7,10 @@ node("master"){
             branch: "master"
         )
         dir('config'){
-            git{
+            git(
               url: "git@github.com:jayabalandevops/homeconf.git",
               branch: "master"
-            }
+            )
         }
         println("Prepared the workspace.")
     }
