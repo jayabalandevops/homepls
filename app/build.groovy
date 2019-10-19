@@ -1,4 +1,4 @@
-import json.groovy.SlurperClassic
+import groovy.json.SlurperClassic
 cDelivery = readFile "$wrks/config/pls.json"
 def jString = new JsonSlurperClassic().parseText(cDelivery)
 def bStr = jString.btool
