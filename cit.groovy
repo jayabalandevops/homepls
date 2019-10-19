@@ -1,4 +1,4 @@
-node("master"){
+node("$NodeName"){
     wrks = env.WORKSPACE
     stage("Prepare"){
         println("Preparing the workspace...")
@@ -18,5 +18,10 @@ node("master"){
         println("Cloning the ARA app...")
         load 'app/clone.groovy'
         println("Cloned the ARA app.")
+    }
+    stage("Build"){
+        println("Building the ARA app...")
+        load 'app/build.groovy'
+        println("Built the ARA app.")
     }
 }
