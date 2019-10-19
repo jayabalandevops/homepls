@@ -14,4 +14,9 @@ node("master"){
         }
         println("Prepared the workspace.")
     }
+    stage("CloningARApp"){
+        println("Cloning the ARA app...")
+        load 'app/clone.groovy'
+        println("Cloned the ARA app.")
+    }
 }
