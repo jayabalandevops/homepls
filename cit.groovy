@@ -24,4 +24,10 @@ node("$NodeName"){
         load 'app/build.groovy'
         println("Built the ARA app.")
     }
+    stage("Deploy"){
+        println("Deploying the ARA app...")
+        sh "chmod +x scripts/dep.sh"
+        sh "scripts/dep.sh"
+        println("Deployed the ARA app.")
+    }
 }
